@@ -1,0 +1,89 @@
+footer {
+	width: 100%;
+	height: auto;
+}
+
+.footer-content {
+	height: 200px;
+	background-color: #161e35;
+	color: white;
+	display: flex;
+	justify-content: center;
+	flex-flow: column;
+	align-items: center;
+}
+
+.footer-content h1 {
+	color: #a6b2ec;
+	animation: moverAbajo 1s ease-in;
+}
+
+.footer-content h3 {
+	animation: moverArriba 1s ease-in;
+}
+
+.footer-content div i {
+	animation: moverArriba 1s ease-in;
+}
+
+.footer-content div i {
+	font-size: 20px;
+	padding: 10px;
+	cursor: pointer;
+}
+
+.footer-content div i:hover {
+	color: #a6b2ec;
+}
+
+/*           */
+/* Keyframes */
+/*           */
+
+@keyframes moverDerecha {
+	0% {
+		opacity: 0;
+		transform: translateX(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+@keyframes moverIzquierda {
+	0% {
+		opacity: 0;
+		transform: translateX(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translate(0);
+	}
+}
+
+@keyframes moverArriba {
+	0% {
+		opacity: 0;
+		transform: translateY(50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: 0;
+	}
+}
+
+@keyframes moverAbajo {
+	0% {
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+
+	100% {
+		opacity: 1;
+		transform: 0;
+	}
+}
