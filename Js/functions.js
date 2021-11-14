@@ -18,7 +18,6 @@ async function handleSubmit(event) {
 }
 
 window.onscroll = function () {
-	console.log(window.scrollY);
 	const activeElement = document.getElementsByClassName('active')[0];
 	const home = document.querySelectorAll('a')[1];
 	const about = document.querySelectorAll('a')[2];
