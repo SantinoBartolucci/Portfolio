@@ -22,17 +22,16 @@ footer {
 	animation: moverArriba 1s ease-in;
 }
 
-.footer-content div i {
+.footer-content div a {
+	color: white;
 	animation: moverArriba 1s ease-in;
-}
-
-.footer-content div i {
 	font-size: 20px;
 	padding: 10px;
 	cursor: pointer;
+	text-decoration: none;
 }
 
-.footer-content div i:hover {
+.footer-content div a:hover {
 	color: #a6b2ec;
 }
 

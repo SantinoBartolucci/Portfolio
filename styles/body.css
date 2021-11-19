@@ -346,7 +346,7 @@ textarea:focus {
 	}
 }
 
-@media (max-width: 720px) {
+@media (max-width: 1000px) {
 	.about-content {
 		margin: 100px;
 	}
@@ -372,7 +372,18 @@ textarea:focus {
 	}
 }
 
-@media (max-width: 375px) {
+@media (max-width: 650px) {
+	/* Cards */
+	.cards-container {
+		width: 100px;
+	}
+	.cards-container .card .face {
+		width: 200px;
+		height: 150px;
+	}
+}
+
+@media (max-width: 600px) {
 	.about-me {
 		min-height: 400px;
 	}
@@ -390,6 +401,17 @@ textarea:focus {
 		padding: 10px;
 		font-size: 15px;
 	}
+}
+
+@media (max-width: 500px) {
+	.contact-content form {
+		width: 300px;
+		height: 400px;
+		padding: 20px;
+	}
+}
+
+@media (max-width: 375px) {
 	/* Cards */
 	.cards-container {
 		width: 10px;
@@ -420,10 +442,5 @@ textarea:focus {
 	}
 	.cards-container .card .face.face2 .content p {
 		font-size: 13px;
-	}
-	.contact-content form {
-		width: 300px;
-		height: 400px;
-		padding: 20px;
 	}
 }
