@@ -8,6 +8,7 @@
 main {
 	display: flex;
 	justify-content: center;
+	width: 100%;
 }
 
 .container {
@@ -336,5 +337,93 @@ textarea:focus {
 	100% {
 		opacity: 1;
 		transform: 0;
+	}
+}
+
+@media (max-width: 1440px) {
+	.about-content {
+		margin: 100px 290px;
+	}
+}
+
+@media (max-width: 720px) {
+	.about-content {
+		margin: 100px;
+	}
+	.cards-container {
+		width: 650px;
+	}
+	.cards-container .card .face {
+		width: 200px;
+		height: 150px;
+	}
+	.cards-container .card .face.face1 .content img {
+		max-width: 120px;
+	}
+	.cards-container .card .face.face2 {
+		padding: 5px;
+		transform: translateY(-50px);
+	}
+	.cards-container .card .face.face2 .content a {
+		margin: 5px 0 0;
+	}
+	.cards-container .card .face.face2 .content p {
+		font-size: 13px;
+	}
+}
+
+@media (max-width: 375px) {
+	.about-me {
+		min-height: 400px;
+	}
+	.about-content {
+		margin: 25px;
+	}
+	.about-content h1 {
+		font-size: 25px;
+	}
+	.about-content p {
+		font-size: 15px;
+	}
+	.about-content button {
+		margin-top: 40px;
+		padding: 10px;
+		font-size: 15px;
+	}
+	/* Cards */
+	.cards-container {
+		width: 10px;
+	}
+	.cards-container .card .face {
+		width: 150px;
+		height: 100px;
+	}
+	.cards-container .card .face.face1 .content img {
+		max-width: 100px;
+	}
+	.cards-container .card .face.face1 .content h3 {
+		margin: 5px 0 0;
+		font-size: 1em;
+	}
+	.cards-container .card:hover .face.face1 {
+		transform: translateY(50px);
+	}
+	.cards-container .card:hover .face.face2 {
+		transform: translateY(50px);
+	}
+	.cards-container .card .face.face2 {
+		padding: 5px;
+		transform: translateY(0);
+	}
+	.cards-container .card .face.face2 .content a {
+		margin: 5px 0 0;
+	}
+	.cards-container .card .face.face2 .content p {
+		font-size: 13px;
+	}
+	.contact-content form {
+		width: 300px;
+		height: 400px;
+		padding: 20px;
 	}
 }

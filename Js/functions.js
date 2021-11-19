@@ -17,28 +17,46 @@ async function handleSubmit(event) {
 	}
 }
 
-window.onscroll = function () {
-	const activeElement = document.getElementsByClassName('active')[0];
-	const home = document.querySelectorAll('a')[1];
-	const about = document.querySelectorAll('a')[2];
-	const projetcs = document.querySelectorAll('a')[3];
-	const contact = document.querySelectorAll('a')[4];
-
-	if (window.scrollY >= 0 && window.scrollY < 883) {
-		activeElement.classList.remove('active');
-		home.classList.add('active');
-	} else if (window.scrollY >= 883 && window.scrollY < 1448) {
-		activeElement.classList.remove('active');
-		about.classList.add('active');
-	} else if (window.scrollY >= 1448 && window.scrollY < 2400) {
-		activeElement.classList.remove('active');
-		projetcs.classList.add('active');
-	} else if (window.scrollY >= 2400) {
-		activeElement.classList.remove('active');
-		contact.classList.add('active');
-	}
-};
-
 document.getElementById('cv').addEventListener('click', function () {
 	alert('Aun no tengo CV :)');
+});
+
+const $home = document.querySelectorAll('a')[1];
+const $about = document.querySelectorAll('a')[2];
+const $projects = document.querySelectorAll('a')[3];
+const $contact = document.querySelectorAll('a')[4];
+
+function callback(entries, observer) {
+	if (entries[0].isIntersecting) {
+		const activeElement = document.getElementsByClassName('active')[0];
+		switch (entries[0].target.id) {
+			case 'hero':
+				activeElement.classList.remove('active');
+				$home.classList.add('active');
+				break;
+			case 'about':
+				activeElement.classList.remove('active');
+				$about.classList.add('active');
+				break;
+			case 'projects':
+				activeElement.classList.remove('active');
+				$projects.classList.add('active');
+				break;
+			case 'contact':
+				activeElement.classList.remove('active');
+				$contact.classList.add('active');
+				break;
+		}
+	}
+}
+
+const observer = new IntersectionObserver(callback, { threshold: 0.9 });
+const home = document.getElementById('hero');
+const about = document.getElementById('about');
+const projects = document.getElementById('projects');
+const contact = document.getElementById('contact');
+const divs = [home, about, projects, contact];
+
+divs.forEach((div) => {
+	observer.observe(div);
 });
