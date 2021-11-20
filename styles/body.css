@@ -411,8 +411,7 @@ textarea:focus {
 	}
 }
 
-@media (max-width: 375px) {
-	/* Cards */
+/* @media (max-width: 375px) {
 	.cards-container {
 		width: 10px;
 	}
@@ -443,4 +442,4 @@ textarea:focus {
 	.cards-container .card .face.face2 .content p {
 		font-size: 13px;
 	}
-}
+} */
